@@ -1,0 +1,12 @@
+Start
+User input
+Real money = x
+			IF x <0 
+			Print (“You need more money”)
+Real unit price = y
+			IF y <0
+			Print (“Unit price must be higher than zero”)
+Result = x/y
+While Result > 0
+	Print (Result)
+End
