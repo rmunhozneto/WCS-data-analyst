@@ -1,4 +1,4 @@
-SELECT `firstname`, `birthday` FROM `wizard` WHERE `birthday` BETWEEN '1970-01-01' AND '1985-12-31';
+SELECT * FROM `wizard` WHERE `birthday` BETWEEN '1970-01-01' AND '1985-12-31';
 ---------------------------------------------------------------------------------------------------------
 1	harry	potter	1980-07-31	london		0
 2	hermione	granger	1979-09-19		Friend of Harry Potter	0
