@@ -28,13 +28,17 @@ ORDER BY t.name;
 
 
 
-SELECT firstname, lastname, enrollment_date, name
-FROM player p
-JOIN wizard on wizard.id = player.wizard_id
-JOIN team ON team.id = player.team_id
-WHERE WEEKDAY(p.enrollment_date)=0 and name = 'gryffindor'
-ORDER BY p.enrollment_date;
+SELECT firstname, lastname, enrollment_date, name 
+FROM player 
+JOIN wizard on wizard.id = player.wizard_id JOIN team ON team.id = player.team_id 
+WHERE DAYOFWEEK(enrollment_date) = "2"  AND name = "Gryffindor" ORDER BY enrollment_date;
 
----------------------------------------------------------
- fred    weasley  1994-01-10    Gryffindor 
+-----------------------------------------------------------
+George    Weasley    1991-08-26      Gryffindor
+Alice     Longbottom 1992-02-17      Gryffindor
+Cadogan             1993-01-04      Gryffindor
+Godric   Gryffindor 1993-08-30      Gryffindor 
+Sirius    Black      1994-01-10      Gryffindor
+Aberforth Dumbledore 1995-04-24      Gryffindor 
+Augusta   Longbottom 1999-10-25      Gryffindor 
 
