@@ -32,7 +32,7 @@ SELECT firstname, lastname, enrollment_date, name
 FROM player p
 JOIN wizard on wizard.id = player.wizard_id
 JOIN team ON team.id = player.team_id
-WHERE WEEKDAY(p.enrollment_date)=0 and name = 'gryffindor';
+WHERE WEEKDAY(p.enrollment_date)=0 and name = 'gryffindor'
 ORDER BY p.enrollment_date;
 
 ---------------------------------------------------------
