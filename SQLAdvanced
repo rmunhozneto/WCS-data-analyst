@@ -28,21 +28,13 @@ ORDER BY t.name;
 
 
 
-SELECT * FROM player p
-WHERE WEEKDAY(p.enrollment_date)=0
+SELECT firstname, lastname, enrollment_date, name
+FROM player p
+JOIN wizard on wizard.id = player.wizard_id
+JOIN team ON team.id = player.team_id
+WHERE WEEKDAY(p.enrollment_date)=0 and name = 'gryffindor';
 ORDER BY p.enrollment_date;
 
---------------------------------
- 44         44        2  chaser  1991-03-11      
- 88         88        3  beater  1991-07-08      
- 82         82        1  chaser  1991-08-26      
- 12         12        2  chaser  1992-01-27      
- 39         39        1  beater  1992-02-17      
- 90         90        1  keeper  1993-01-04      
- 30         30        1  seeker  1993-08-30      
-  6          6        1  beater  1994-01-10      
- 20         20        1  keeper  1995-04-24      
-  1          1        4  beater  1995-10-09      
- 50         50        3  chaser  1996-12-02      
- 25         25        3  beater  1996-12-16      
- 41         41        1  chaser  1999-10-25      
+---------------------------------------------------------
+ fred    weasley  1994-01-10    Gryffindor 
+
